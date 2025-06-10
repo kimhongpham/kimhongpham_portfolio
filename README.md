@@ -1,12 +1,59 @@
-# React + Vite
+# 💼 Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive personal portfolio website built with **React** and **Vite**. This site showcases my projects, skills, and background as a developer.
 
-Currently, two official plugins are available:
+## 🌐 Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[🔗 View Live Website](https://your-portfolio-link.com)
 
-## Expanding the ESLint configuration
+## 🛠️ Built With
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ⚛️ React
+- ⚡ Vite
+- 🎨 CSS / SCSS / TailwindCSS (tuỳ chỉnh)
+- 📱 Responsive Design
+- 📦 Deployment: Vercel / Netlify / GitHub Pages
+
+## 📸 Features
+
+- About Me section with introduction and background.
+- Projects section with screenshots and links.
+- Skills section with icons or progress bars.
+- Contact form (EmailJS or other integration).
+- Mobile-first responsive design.
+- Smooth scroll & animated transitions (Framer Motion hoặc AOS).
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (>= 16)
+- npm or yarn
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/kimhongpham/kimhongpham_portfolio.git
+
+# Navigate into the project folder
+cd portfolio
+
+# Install dependencies
+npm install
+# or
+yarn
+## 🚀 Running Locally
+
+```bash
+npm run dev
+# or
+yarn dev
+## 🏗️ Build for Production
+npm run build
+# or
+yarn build
+## 🔍 Preview Production Build
+npm run preview
+# or
+yarn preview
