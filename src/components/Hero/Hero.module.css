@@ -1,0 +1,57 @@
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #f8f9fa;
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.avatar {
+  width: 200px; /* Cố định chiều rộng */
+  height: 200px; /* Cố định chiều cao */
+  border-radius: 50%; /* Bo tròn */
+  margin-bottom: 1rem;
+  border: 3px solid #333;
+  object-fit: cover; /* Đảm bảo ảnh không bị méo */
+  object-position: center; /* Căn giữa ảnh */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ nhẹ */
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.hero h2 {
+  font-size: 1.5rem;
+  color: #666;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.avatar {
+  width: clamp(150px, 20vw, 200px); /* Tối thiểu 150px, lý tưởng 20% viewport width, tối đa 200px */
+  height: clamp(150px, 20vw, 200px);
+  /* Các thuộc tính khác giữ nguyên */
+}
+
+.avatar {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.avatar:hover {
+  transform: scale(1.05); /* Phóng nhẹ khi hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}

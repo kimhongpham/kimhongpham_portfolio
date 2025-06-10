@@ -1,0 +1,116 @@
+.projects {
+  padding: 4rem 2rem;
+  background-color: #242424; /* Thêm màu nền phù hợp */
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.87); /* Màu chữ sáng */
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.projectCard {
+  border: 1px solid #444; /* Đổi màu border tối hơn */
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  background-color: #1a1a1a; /* Thêm nền tối cho card */
+  color: rgba(255, 255, 255, 0.87); /* Màu chữ sáng */
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Đảm bảo chiều cao đồng đều */
+}
+
+.projectCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Thêm shadow khi hover */
+}
+
+.projectImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  opacity: 0.9; /* Làm mờ ảnh nhẹ */
+  transition: opacity 0.3s ease;
+}
+
+.projectCard:hover .projectImage {
+  opacity: 1; /* Ảnh rõ hơn khi hover */
+}
+
+.projectCard h3 {
+  padding: 1rem 1rem 0;
+  margin: 0;
+  color: #646cff; /* Màu tiêu đề giống link */
+}
+
+.projectCard p {
+  padding: 0 1rem 1rem;
+  color: rgba(255, 255, 255, 0.7); /* Màu chữ nhạt hơn */
+}
+
+.projectLinks {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem 1rem;
+  margin-top: auto; /* Đẩy projectLinks xuống cuối card */
+}
+
+.projectLinks a {
+  text-decoration: none;
+  color: #646cff; /* Màu link chính */
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.projectLinks a:hover {
+  color: #535bf2; /* Màu hover giống theme */
+  text-decoration: underline;
+}
+
+.filterBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+.filterBar button {
+  background: #1a1a1a;
+  color: #ffe066;
+  border: 1px solid #444;
+  border-radius: 20px;
+  padding: 0.4rem 1.2rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s, color 0.2s;
+}
+.filterBar button:hover,
+.filterBar .activeFilter {
+  background: #646cff;
+  color: #fff;
+  border-color: #646cff;
+}
+.activeFilter {
+  background: #646cff;
+  color: #fff;
+  border-color: #646cff;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .projects {
+    padding: 2rem 1rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+}

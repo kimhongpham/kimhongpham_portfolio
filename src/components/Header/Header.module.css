@@ -1,0 +1,110 @@
+/* src/components/Header/Header.module.css */
+
+.header {
+  background-color: #282c34; /* Dark background for the header */
+  padding: 20px; /* Padding around the header */
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center the nav */
+  align-items: center; /* Center items vertically */
+  position: sticky;      /* Giữ header đứng yên khi lăn chuột */
+  top: 0;                /* Dính vào phía trên cùng */
+  z-index: 1000;         /* Đảm bảo header nổi trên các phần khác */
+}
+
+.nav {
+  width: 100%; /* Full width for the nav */
+}
+
+.navList {
+  list-style: none; /* Remove default list styling */
+  display: flex; /* Use flexbox for horizontal layout */
+  justify-content: space-around; /* Space items evenly */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.navList li {
+  margin: 0 15px; /* Space between list items */
+}
+
+.navList a {
+  color: #61dafb; /* Light blue color for links */
+  text-decoration: none; /* Remove underline from links */
+  font-weight: bold; /* Bold text for links */
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.navList a:hover {
+  color: #21a1f1; /* Change color on hover */
+}
+
+/* Active link styles */
+.active {
+  color: #fff !important;
+  border-bottom: 2px solid #646cff;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 2001; /* Đảm bảo hamburger nổi trên navList và header */
+  position: relative;
+}
+
+.bar {
+  width: 28px;
+  height: 4px;
+  background: #ffe066; /* Đổi sang vàng cho nổi bật */
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+  display: block;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .header {
+    padding: 10px; /* Giảm padding */
+  }
+  .navList {
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: center; /* Center items */
+  }
+
+  .navList li {
+    margin: 8px 0; /* Space between items */
+  }
+  .navList a {
+    font-size: 1rem; /* Nhỏ hơn */
+    padding: 6px 0;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .navList {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: #282c34;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    z-index: 2000; /* Thấp hơn hamburger */
+  }
+  .navList.open {
+    display: flex;
+  }
+  .navList li {
+    margin: 12px 0;
+  }
+}

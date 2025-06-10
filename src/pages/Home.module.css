@@ -1,0 +1,63 @@
+/* src/components/Home/Home.module.css */
+
+.home {
+  font-family: 'Arial', sans-serif; /* Set a clean font for the entire home */
+  color: #333; /* Default text color */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+main {
+  max-width: 1200px; /* Set a maximum width for the main content */
+  margin: 0 auto; /* Center the main content */
+  padding: 20px; /* Add padding around the main content */
+}
+
+h1, h2, h3 {
+  margin: 20px 0; /* Add margin to headings */
+  font-weight: bold; /* Make headings bold */
+}
+
+h1 {
+  font-size: 2.5rem; /* Large font size for main heading */
+}
+
+h2 {
+  font-size: 2rem; /* Medium font size for section headings */
+}
+
+h3 {
+  font-size: 1.5rem; /* Smaller font size for subheadings */
+}
+
+/* Add some spacing between sections */
+section {
+  margin-bottom: 40px; /* Space between sections */
+}
+
+/* Footer styling */
+footer {
+  background-color: #282c34; /* Dark background for footer */
+  color: #fff; /* White text color for footer */
+  text-align: center; /* Center text in footer */
+  padding: 20px; /* Padding around footer */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
+
+  h2 {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+
+  h3 {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+  }
+
+  main {
+    padding: 10px; /* Reduce padding on smaller screens */
+  }
+}

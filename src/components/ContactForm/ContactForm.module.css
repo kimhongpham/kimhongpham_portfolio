@@ -1,0 +1,96 @@
+.contact {
+  padding: 4rem 2rem;
+  background-color: #242424; /* Màu nền phù hợp với theme */
+  color: rgba(255, 255, 255, 0.87); /* Màu chữ chính */
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.contactForm {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #444; /* Border tối hơn */
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #1a1a1a; /* Nền input tối */
+  color: rgba(255, 255, 255, 0.87); /* Màu chữ input */
+  transition: border-color 0.3s ease;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  border-color: #646cff; /* Màu border khi focus */
+  outline: none;
+}
+
+.formGroup textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.submitButton {
+  background-color: #646cff; /* Màu chính */
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.submitButton:hover {
+  background-color: #535bf2; /* Màu hover */
+  transform: translateY(-2px); /* Hiệu ứng nổi nhẹ */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.statusMessage {
+  margin-top: 1rem;
+  text-align: center;
+  color: #ffe066;           /* Chữ vàng nổi bật */
+  background: none;         /* Không nền */
+  padding: 0;               /* Không padding */
+  border-radius: 0;         /* Không bo góc */
+  font-weight: 700;         /* Đậm hơn */
+  font-size: 1.1rem;        /* To hơn một chút */
+  box-shadow: none;         /* Không bóng */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .contact {
+    padding: 2rem 1rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+  
+  .submitButton {
+    padding: 0.8rem 1.5rem;
+  }
+}
