@@ -1,0 +1,148 @@
+.galaxy-container {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: radial-gradient(ellipse at 50% 40%, #1a0033 0%, #0d001a 40%, #000511 70%, #000 100%);
+  overflow: hidden;
+  z-index: 0; /* Để z-index: 0 hoặc thấp nhất */
+  pointer-events: none;
+}
+
+/* Nebula layers - mềm mại và mờ hơn */
+.nebula {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.7;
+  animation: drift 38s infinite linear;
+  pointer-events: none;
+}
+
+.nebula-1 {
+  width: 380px; height: 260px;
+  background: radial-gradient(circle, rgba(147,39,143,0.22) 0%, rgba(147,39,143,0.08) 60%, transparent 100%);
+  top: 18%; left: 8%;
+  animation-duration: 44s;
+}
+.nebula-2 {
+  width: 520px; height: 340px;
+  background: radial-gradient(circle, rgba(30,144,255,0.13) 0%, rgba(30,144,255,0.04) 60%, transparent 100%);
+  top: 48%; right: 6%;
+  animation-duration: 54s;
+  animation-direction: reverse;
+}
+.nebula-3 {
+  width: 400px; height: 260px;
+  background: radial-gradient(circle, rgba(255,20,147,0.11) 0%, rgba(255,20,147,0.03) 60%, transparent 100%);
+  bottom: 18%; left: 28%;
+  animation-duration: 62s;
+}
+
+/* Milky Way core */
+.milky-way {
+  position: absolute;
+  width: 120%;
+  height: 28%;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(255,255,255,0.03) 10%,
+    rgba(147,39,143,0.08) 30%,
+    rgba(30,144,255,0.06) 50%,
+    rgba(147,39,143,0.08) 70%,
+    rgba(255,255,255,0.03) 90%,
+    transparent 100%);
+  top: 36%; left: -10%;
+  transform: rotate(-15deg);
+  filter: blur(4px);
+  opacity: 0.7;
+  animation: milkyWayRotate 110s infinite linear;
+}
+
+/* Stars */
+.stars-layer {
+  position: absolute;
+  width: 100%; height: 100%;
+  pointer-events: none;
+}
+.star {
+  position: absolute;
+  border-radius: 50%;
+  animation: twinkle 3.5s infinite;
+  box-shadow: 0 0 6px currentColor;
+  opacity: 0.7;
+}
+
+/* Shooting stars */
+.shooting-stars-layer {
+  position: absolute;
+  width: 100%; height: 100%;
+  pointer-events: none;
+}
+.shooting-star {
+  position: absolute;
+  width: 2px; height: 2px;
+  background: linear-gradient(90deg, #fff 0%, #fff8 20%, transparent 100%);
+  border-radius: 50%;
+  animation: shoot 4s infinite linear;
+  opacity: 0.7;
+}
+.shooting-star::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 50px; height: 1px;
+  background: linear-gradient(90deg, transparent 0%, #fff9 60%, #fff 100%);
+  transform: translateX(100%);
+}
+
+/* Particles */
+.particles {
+  position: absolute;
+  width: 100%; height: 100%;
+  pointer-events: none;
+}
+.particle {
+  position: absolute;
+  width: 1px; height: 1px;
+  background: rgba(255,255,255,0.22);
+  border-radius: 50%;
+  animation: float 22s infinite linear;
+}
+
+/* Animations */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; transform: scale(1);}
+  50% { opacity: 1; transform: scale(1.18);}
+}
+@keyframes shoot {
+  0% { transform: translateX(-100px) translateY(-100px); opacity: 0;}
+  10% { opacity: 1;}
+  90% { opacity: 1;}
+  100% { transform: translateX(100vw) translateY(100vh); opacity: 0;}
+}
+@keyframes drift {
+  0% { transform: translate(0,0) rotate(0deg);}
+  33% { transform: translate(22px,-22px) rotate(120deg);}
+  66% { transform: translate(-16px,16px) rotate(240deg);}
+  100% { transform: translate(0,0) rotate(360deg);}
+}
+@keyframes milkyWayRotate {
+  0% { transform: rotate(-15deg) translateX(0);}
+  100% { transform: rotate(-15deg) translateX(-50px);}
+}
+@keyframes float {
+  0% { transform: translateY(0) translateX(0); opacity: 0;}
+  10% { opacity: 1;}
+  90% { opacity: 1;}
+  100% { transform: translateY(-100vh) translateX(40px); opacity: 0;}
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nebula-1, .nebula-2, .nebula-3 {
+    width: 180px; height: 120px;
+  }
+  .milky-way {
+    height: 18%;
+  }
+}

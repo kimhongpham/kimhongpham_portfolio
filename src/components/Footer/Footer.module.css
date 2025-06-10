@@ -1,3 +1,11 @@
+@keyframes socialBounce {
+  0%   { transform: scale(1); }
+  30%  { transform: scale(1.28) translateY(-8px); }
+  50%  { transform: scale(1.18) translateY(-4px); }
+  70%  { transform: scale(1.22) translateY(-2px);}
+  100% { transform: scale(1.22) translateY(0);}
+}
+
 .footer {
   text-align: center;
   padding: 2.5rem 2rem;
@@ -23,4 +31,34 @@
 .socialLinks a:hover {
   color: #ffffff;
   text-decoration: none;
+}
+
+.socialIcons {
+  position: fixed;
+  top: 64px;      /* Tăng top lên (ví dụ 64px hoặc lớn hơn chiều cao header) */
+  left: 24px;
+  z-index: 2000;
+  display: flex;
+  gap: 18px;
+  font-size: 1.7rem;
+}
+
+.socialIcons a {
+  color: #ffe066;
+  transition: color 0.2s, transform 0.18s;
+}
+
+.socialIcons a:hover {
+  color: #646cff;
+  animation: socialBounce 0.38s cubic-bezier(.23,1.01,.32,1) forwards;
+}
+
+@media (max-width: 600px) {
+  .socialIcons {
+    flex-direction: column;
+    top: 80px;      /* Đẩy xuống dưới header hơn nếu cần */
+    left: 12px;
+    gap: 14px;
+    font-size: 1.4rem;
+  }
 }

@@ -4,8 +4,8 @@ import styles from './Home.module.css';
 import Header from '../components/Header/Header';
 import Hero from '../components/Hero/Hero';
 import Projects from '../components/Projects/Projects';
-import Skills from '../components/Skills/Skills';
-import ContactForm from '../components/ContactForm/ContactForm';
+import Skills from '../components/Education/Education';
+import ContactFab from '../components/ContactForm/ContactFab';
 import Footer from '../components/Footer/Footer';
 
 const Home = () => {
@@ -78,17 +78,8 @@ const Home = () => {
         >
           <Skills />
         </motion.section>
-        <motion.section
-          id="contact"
-          ref={contactRef}
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true }}
-        >
-          <ContactForm />
-        </motion.section>
       </main>
+      <ContactFab />
       <Footer />
     </div>
   );

@@ -8,11 +8,11 @@ const Hero = () => {
       <div className={styles.heroContent}>
         <img 
           src={profileImage}
-          alt="Kim Hong Pham - Full Stack Developer" 
+          alt="Kim Hong Pham - FullStack Software Engineer" 
           className={styles.avatar}
         />
         <h1>Kim Hong Pham</h1>
-        <h2>Full Stack Developer</h2>
+        <h2>FullStack Software Engineer</h2>
         <p>
           "I develop scalable, responsive full-stack applications, combining sleek user interfaces with powerful backend logic and efficient database design."
         </p>

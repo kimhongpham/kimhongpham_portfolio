@@ -20,9 +20,11 @@ a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
+  transition: color 0.2s;
 }
 a:hover {
-  color: #535bf2;
+  color: #ffe066;
+  text-decoration: underline;
 }
 
 body {
@@ -51,7 +53,10 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #ffe066;
+  background-color: #23234a;
+  color: #ffe066;
+  box-shadow: 0 2px 12px #646cff33;
 }
 button:focus,
 button:focus-visible {
@@ -121,4 +126,21 @@ button:focus-visible {
 
 html {
   scroll-padding-top: 80px; /* Đặt bằng hoặc lớn hơn chiều cao header */
+}
+
+.hero, .projects, .contact {
+  animation: fadeInSection 1s cubic-bezier(.23,1.01,.32,1) both;
+  box-shadow: 0 4px 32px 0 rgba(100,108,255,0.06);
+  border-radius: 18px;
+}
+
+@keyframes fadeInSection {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }

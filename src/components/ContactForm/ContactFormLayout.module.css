@@ -1,0 +1,12 @@
+/* Chat Container & Responsive */
+.chatContainer {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  background: #ffffff;
+}
+@media (max-width: 480px) {
+  .chatContainer {
+    height: 350px;
+  }
+}

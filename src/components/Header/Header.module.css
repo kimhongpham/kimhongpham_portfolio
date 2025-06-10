@@ -2,13 +2,14 @@
 
 .header {
   background-color: #282c34; /* Dark background for the header */
-  padding: 20px; /* Padding around the header */
+  padding: 10px 0;         /* Giảm padding trên/dưới */
+  min-height: 48px;        /* Đặt chiều cao tối thiểu nhỏ hơn */
   display: flex; /* Use flexbox for layout */
   justify-content: center; /* Center the nav */
   align-items: center; /* Center items vertically */
   position: sticky;      /* Giữ header đứng yên khi lăn chuột */
   top: 0;                /* Dính vào phía trên cùng */
-  z-index: 1000;         /* Đảm bảo header nổi trên các phần khác */
+  z-index: 900;         /* Giảm xuống để socialIcons nổi lên trên */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
@@ -26,16 +27,17 @@
 }
 
 .navList li {
-  margin: 0 15px; /* Space between list items */
+  margin: 0 10px;          /* Giảm khoảng cách giữa các mục */
 }
 
 .navList a {
   color: #61dafb; /* Light blue color for links */
   text-decoration: none; /* Remove underline from links */
   font-weight: bold; /* Bold text for links */
+  font-size: 0.98rem;      /* Nhỏ hơn một chút */
+  padding: 3px 0;          /* Giảm padding dọc */
   transition: all 0.3s ease;
   position: relative;
-  padding: 5px 0;
 }
 
 .navList a:hover {
@@ -70,8 +72,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 32px;             /* Nhỏ hơn */
+  height: 32px;
   background: none;
   border: none;
   cursor: pointer;
@@ -85,10 +87,10 @@
 }
 
 .bar {
-  width: 28px;
-  height: 4px;
+  width: 22px;             /* Nhỏ hơn */
+  height: 3px;
   background: #ffe066; /* Đổi sang vàng cho nổi bật */
-  margin: 4px 0;
+  margin: 3px 0;
   border-radius: 2px;
   transition: all 0.3s ease;
   display: block;
@@ -154,5 +156,11 @@
   }
   .hamburger {
     display: flex;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    display: none !important;
   }
 }

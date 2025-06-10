@@ -4,8 +4,7 @@ import styles from './Header.module.css';
 const navItems = [
   { id: 'hero', label: 'Home', href: '#hero' },
   { id: 'projects', label: 'Projects', href: '#projects' },
-  { id: 'skills', label: 'Skills', href: '#skills' },
-  { id: 'contact', label: 'Contact', href: '#contact' },
+  { id: 'education', label: 'Education', href: '#education' },
 ];
 
 const Header = ({ activeSection }) => {
