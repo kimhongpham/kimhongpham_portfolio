@@ -4,7 +4,7 @@ import styles from './Home.module.css';
 import Header from '../components/Header/Header';
 import Hero from '../components/Hero/Hero';
 import Projects from '../components/Projects/Projects';
-import Skills from '../components/Education/Education';
+import Education from '../components/Education/Education';
 import ContactFab from '../components/ContactForm/ContactFab';
 import Footer from '../components/Footer/Footer';
 
@@ -12,14 +12,14 @@ const Home = () => {
   const [activeSection, setActiveSection] = useState('hero');
   const heroRef = useRef();
   const projectsRef = useRef();
-  const skillsRef = useRef();
+  const educationRef = useRef();
   const contactRef = useRef();
 
   useEffect(() => {
     const sections = [
       { id: 'hero', ref: heroRef },
       { id: 'projects', ref: projectsRef },
-      { id: 'skills', ref: skillsRef },
+      { id: 'education', ref: educationRef },
       { id: 'contact', ref: contactRef },
     ];
 
@@ -69,14 +69,14 @@ const Home = () => {
           <Projects />
         </motion.section>
         <motion.section
-          id="skills"
-          ref={skillsRef}
+          id="education"
+          ref={educationRef}
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <Skills />
+          <Education />
         </motion.section>
       </main>
       <ContactFab />

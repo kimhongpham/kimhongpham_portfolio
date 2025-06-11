@@ -93,7 +93,7 @@ const Projects = () => {
 
   return (
     <section id="projects" className={styles.projects}>
-      <h2 className={styles.sectionTitle}>My Projects</h2>
+      <h2 className={styles.sectionTitle}>Projects</h2>
       <div className={styles.filterBar}>
         <button
           className={selectedTech === 'All' ? styles.activeFilter : ''}

@@ -1,16 +1,26 @@
 import React from 'react';
 import styles from './Footer.module.css';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaPhone } from 'react-icons/fa';
 
 const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.contactInfo}>
-        <h3>Contact</h3>
+        <div className={styles.contactHeader}>
+          <h3>Contact</h3>
+        </div>
         <p>
-          <a href="mailto:rosiepham0107@gmail.com">rosiepham0107@gmail.com</a>
+          <FaEnvelope className={styles.contactIcon} />
+          <a href="mailto:rosiepham0107@gmail.com">
+            rosiepham0107@gmail.com
+          </a>
         </p>
-        <p>(84+)703-920-317</p>
+        <p>
+          <FaPhone className={styles.contactIcon} />
+          <a href="tel:+84703920317">
+            (84+)703-920-317
+          </a>
+        </p>
       </div>
     </footer>
   );

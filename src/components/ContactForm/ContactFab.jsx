@@ -13,7 +13,7 @@ const ContactFab = () => {
         onClick={() => setOpen(true)}
         aria-label="Get In Touch"
       >
-        <FaEnvelope />
+        ✉️
       </button>
       {open && (
         <div className={styles.overlay} onClick={() => setOpen(false)}>

@@ -11,7 +11,7 @@ const ContactForm = () => {
   const [messages, setMessages] = useState([
     {
       id: 1,
-      text: "Hi there! 👋 I'm here to help you get in touch with our team.",
+      text: "Hi there! 👋 I'm here to help you get in touch with me.",
       sender: 'bot',
       timestamp: 'Just now'
     },
@@ -101,7 +101,7 @@ const ContactForm = () => {
       setTimeout(() => {
         addMessage("Perfect! 📧", 'bot');
         setTimeout(() => {
-          addMessage("Now, what would you like to tell us?", 'bot');
+          addMessage("Now, what would you like to tell me?", 'bot');
           setCurrentStep('message');
         }, 1000);
       }, 1500);
@@ -112,14 +112,14 @@ const ContactForm = () => {
 
       showTyping();
       setTimeout(() => {
-        addMessage("Got it! Let me send that for you... 🚀", 'bot');
+        addMessage("Got it! Please wait for me... 🚀", 'bot');
 
         // Send email
         const dataToSend = { ...formData, message: inputValue };
         emailjs.send(SERVICE_ID, TEMPLATE_ID, dataToSend, PUBLIC_KEY)
           .then(() => {
             setTimeout(() => {
-              addMessage("Message sent successfully! ✅ We'll get back to you soon.", 'bot');
+              addMessage("I'll get back to you soon.", 'bot');
               setCurrentStep('sent');
               setStatus('sent');
             }, 2000);
@@ -226,7 +226,7 @@ const ContactForm = () => {
               setMessages([
                 {
                   id: 1,
-                  text: "Hi there! 👋 I'm here to help you get in touch with our team.",
+                  text: "Hi there! 👋 I'm here to help you get in touch with me.",
                   sender: 'bot',
                   timestamp: 'Just now'
                 },
