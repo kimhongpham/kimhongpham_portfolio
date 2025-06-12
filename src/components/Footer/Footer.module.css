@@ -35,12 +35,12 @@
 
 .socialIcons {
   position: fixed;
-  top: 0;         /* Sát mép trên */
-  left: 0;        /* Sát mép trái */
+  top: 12px;      /* Cách mép trên 12px */
+  left: 12px;     /* Cách mép trái 12px */
   z-index: 2000;
   display: flex;
-  gap: 10px;      /* Nhỏ lại cho gọn */
-  font-size: 1.4rem;
+  gap: 14px;      /* Nhỏ lại cho gọn */
+  font-size: 2rem;   /* Tăng kích thước icon */
   align-items: center;
   background: none;
   box-shadow: none;
@@ -49,6 +49,7 @@
 .socialIcons a {
   color: #ffe066;
   transition: color 0.2s, transform 0.18s;
+  font-size: 2rem;   /* Đảm bảo icon to hơn */
 }
 
 .socialIcons a:hover {
@@ -123,15 +124,23 @@
 @media (max-width: 600px) {
   .socialIcons {
     flex-direction: column;
-    top: 0;      /* Sát mép trên */
-    left: 0;     /* Sát mép trái */
-    gap: 8px;    /* Nhỏ lại cho gọn */
-    font-size: 1.1rem;
+    top: 10px;    /* Mobile: cách mép trên 10px */
+    left: 10px;   /* Mobile: cách mép trái 10px */
+    gap: 12px;
+    font-size: 1.5rem;
   }
 
   .contactInfo {
     padding: 1.2rem 0.7rem;
     max-width: 98vw;
     font-size: 0.98rem;
+  }
+
+  .socialIcons {
+    font-size: 1.5rem; /* Mobile cũng to hơn mặc định */
+    gap: 12px;
+  }
+  .socialIcons a {
+    font-size: 1.5rem;
   }
 }
