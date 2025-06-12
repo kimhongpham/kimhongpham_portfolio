@@ -33,6 +33,7 @@ const ContactForm = () => {
   const [isTyping, setIsTyping] = useState(false);
   const [status, setStatus] = useState('');
   const messagesEndRef = useRef(null);
+  const textareaRef = useRef(null);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -41,6 +42,12 @@ const ContactForm = () => {
   useEffect(() => {
     scrollToBottom();
   }, [messages, isTyping]);
+
+  useEffect(() => {
+    if (currentStep !== 'sent' && !isTyping) {
+      textareaRef.current && textareaRef.current.focus();
+    }
+  }, [currentStep, isTyping]);
 
   const addMessage = (text, sender, callback) => {
     const newMessage = {
@@ -199,6 +206,7 @@ const ContactForm = () => {
         <div className={styles.inputArea}>
           <div className={styles.inputContainer}>
             <textarea
+              ref={textareaRef}
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
               onKeyPress={handleKeyPress}

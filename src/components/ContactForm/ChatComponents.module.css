@@ -1,0 +1,187 @@
+/* ===== CHAT COMPONENTS & STYLING ===== */
+
+/* Bot Avatar */
+.botAvatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(134deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: bold;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.userMessage .botAvatar {
+  margin-right: 0;
+  margin-left: 8px;
+}
+
+/* Message Bubble */
+.messageBubble {
+  padding: 8px 12px;
+  border-radius: 16px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  word-wrap: break-word;
+  max-width: 100%;
+}
+
+.botMessage .messageBubble {
+  background: #e4e6ea;
+  color: #050505;
+}
+
+.userMessage .messageBubble {
+  background: linear-gradient(134deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+/* Message Time */
+.messageTime {
+  font-size: 0.7rem;
+  color: #65676b;
+  margin-top: 4px;
+  margin-left: 12px;
+}
+
+.userMessage .messageTime {
+  margin-left: 0;
+  margin-right: 12px;
+}
+
+/* Typing Indicator */
+.typingIndicator {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  background: #e4e6ea;
+  border-radius: 16px;
+  width: fit-content;
+}
+
+.typingDot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #65676b;
+  margin: 0 2px;
+  animation: typing 1.4s infinite;
+}
+
+.typingDot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typingDot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes typing {
+  0%, 60%, 100% { 
+    opacity: 0.4; 
+    transform: scale(0.8);
+  }
+  30% { 
+    opacity: 1; 
+    transform: scale(1);
+  }
+}
+
+/* Buttons */
+.sendButton {
+  background: linear-gradient(134deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  margin-left: 6px;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.sendButton:hover:not(:disabled) {
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.sendButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.restartButton {
+  background: linear-gradient(134deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 16px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+.restartButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* Input Styling */
+.messageInput::placeholder {
+  color: #65676b;
+}
+
+.messageInput:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.messageInput:focus {
+  outline: none;
+}
+
+.inputContainer:focus-within {
+  box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2);
+}
+
+/* ===== RESPONSIVE COMPONENTS ===== */
+
+@media (max-width: 480px) {
+  .messageBubble {
+    font-size: 0.85rem;
+    padding: 7px 10px;
+  }
+  
+  .botAvatar {
+    width: 24px;
+    height: 24px;
+    font-size: 0.6rem;
+    margin-right: 6px;
+  }
+  
+  .sendButton {
+    width: 28px;
+    height: 28px;
+    font-size: 0.7rem;
+  }
+}
+
+/* ===== ACCESSIBILITY FOR COMPONENTS ===== */
+
+@media (prefers-reduced-motion: reduce) {
+  .typingDot {
+    animation: none;
+  }
+}
