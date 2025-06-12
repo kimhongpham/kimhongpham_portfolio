@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import styles from './Home.module.css';
-import Header from '../components/Header/Header';
+// import Header from '../components/Header/Header'; // Bỏ dòng này
 import Hero from '../components/Hero/Hero';
 import Projects from '../components/Projects/Projects';
 import Education from '../components/Education/Education';
@@ -46,7 +46,7 @@ const Home = () => {
 
   return (
     <div className={styles.home}>
-      <Header activeSection={activeSection} />
+      {/* <Header activeSection={activeSection} /> */} {/* Bỏ dòng này */}
       <main>
         <motion.section
           id="hero"
