@@ -5,12 +5,12 @@ import profileImage from '../../assets/images/profile.jpg';
 const Hero = () => {
   return (
     <section id="home" className={styles.hero}>
+      <img 
+        src={profileImage}
+        alt="Kim Hong Pham - FullStack Software Engineer" 
+        className={styles.avatar}
+      />
       <div className={styles.heroContent}>
-        <img 
-          src={profileImage}
-          alt="Kim Hong Pham - FullStack Software Engineer" 
-          className={styles.avatar}
-        />
         <h1>Kim Hong Pham</h1>
         <h2>FullStack Software Engineer</h2>
         <p>

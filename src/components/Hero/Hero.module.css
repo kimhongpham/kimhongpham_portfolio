@@ -9,36 +9,41 @@
 }
 
 .hero {
-  text-align: center;
-  padding: 0; /* Bỏ khung/padding */
-  background: none; /* Bỏ nền */
-  box-shadow: none; /* Nếu có */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 70vh;
+  padding: 0 5vw;
+  background: none;
+  box-shadow: none;
+  text-align: left;
 }
 
 .heroContent {
-  max-width: 100%;
-  margin: 0 auto;
+  max-width: 600px;
+  margin-left: 0;
 }
 
 .avatar {
-  width: clamp(150px, 20vw, 200px);
-  height: clamp(150px, 20vw, 200px);
-  border-radius: 50%;
-  margin-bottom: 1rem;
-  border: 3px solid var(--border-color);
+  width: clamp(220px, 32vw, 340px);
+  height: clamp(160px, 22vw, 220px);
+  border-radius: 24px;           /* Bo tròn góc, không phải hình tròn */
+  margin-right: 3vw;
+  margin-bottom: 0;
+  border: 4px solid var(--border-color);
   object-fit: cover;
   object-position: center;
-  box-shadow: 0 4px 8px var(--shadow-color);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 24px var(--shadow-color);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .avatar:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px var(--hover-shadow-color);
+  transform: scale(1.07);
+  box-shadow: 0 12px 32px var(--hover-shadow-color);
 }
 
 .hero h1 {
-  font-size: clamp(2.8rem, 7vw, 4rem); /* Phóng to tên hơn */
+  font-size: clamp(3rem, 7vw, 4.5rem);
   margin-bottom: 0.5rem;
   color: var(--primary-color);
   font-weight: 800;
@@ -47,26 +52,33 @@
 }
 
 .hero h2 {
-  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  font-size: clamp(1.3rem, 3vw, 2rem);
   color: var(--secondary-color);
-  margin-bottom: 1rem;
-  font-weight: 400;
+  margin-bottom: 1.2rem;
+  font-weight: 500;
 }
 
 .hero p {
-  max-width: min(600px, 90%);
-  margin: 0 auto;
-  font-size: clamp(1rem, 2vw, 1.1rem);
+  max-width: 90%;
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
   color: var(--text-color);
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .hero {
+    flex-direction: column;
+    align-items: center;
     padding: 2rem 1rem;
+    min-height: 60vh;
+    text-align: center;
   }
-  
+  .avatar {
+    margin-right: 0;
+    margin-bottom: 1.2rem;
+  }
   .heroContent {
+    margin-left: 0;
     max-width: 100%;
   }
 }
