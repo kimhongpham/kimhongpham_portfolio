@@ -65,7 +65,7 @@
   margin: 0 auto 2rem auto;
   max-width: 340px;
   color: #ffe066;
-  text-align: left;
+  text-align: center;    /* Chỉ đổi dòng này từ left sang center */
   transition: box-shadow 0.2s;
 }
 
@@ -96,7 +96,8 @@
 .contactInfo p {
   display: flex;
   align-items: center;
-  gap: 8px; /* hoặc 10px nếu muốn rộng hơn */
+  gap: 8px;
+  justify-content: center; /* Thêm dòng này để căn giữa nội dung */
 }
 
 .contactHeader {

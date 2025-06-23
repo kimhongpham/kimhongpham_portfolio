@@ -18,7 +18,7 @@ const Footer = () => {
         <p>
           <FaPhone className={styles.contactIcon} />
           <a href="tel:+84703920317">
-            (84+)703-920-317
+            (+84)703-920-317
           </a>
         </p>
       </div>
