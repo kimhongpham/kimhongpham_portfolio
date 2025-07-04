@@ -1,14 +1,14 @@
 .projects {
   padding: 1rem 2rem; /* Giảm padding trên/dưới từ 4rem xuống 2rem */
-  background-color: #242424; /* Thêm màu nền phù hợp */
+  background-color: #ffffff; /* Thêm màu nền phù hợp */
 }
 
 .sectionTitle {
   text-align: center;
   margin-bottom: 2rem;
   font-size: 2rem;
-  color: rgba(255, 255, 255, 0.87);
-  background: linear-gradient(90deg, #ffe066 30%, #646cff 70%);
+  color: #213547;
+  background: linear-gradient(90deg, #6495ed 30%, #4a7bc8 70%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -36,16 +36,16 @@
 }
 
 .projectCard {
-  border: 1px solid #444; /* Đổi màu border tối hơn */
+  border: 1px solid #e0e0e0; /* Đổi màu border sáng hơn */
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.3s ease;
-  background-color: #1a1a1a; /* Thêm nền tối cho card */
-  color: rgba(255, 255, 255, 0.87); /* Màu chữ sáng */
+  background-color: #ffffff; /* Thêm nền sáng cho card */
+  color: #213547; /* Màu chữ tối */
   display: flex;
   flex-direction: column;
   height: 100%; /* Đảm bảo chiều cao đồng đều */
-  box-shadow: 0 4px 24px rgba(100, 108, 255, 0.08);
+  box-shadow: 0 4px 24px rgba(100, 149, 237, 0.08);
   position: relative;
   z-index: 1;
 }
@@ -55,7 +55,7 @@
   position: absolute;
   inset: 0;
   border-radius: 8px;
-  background: linear-gradient(120deg, #ffe06633 0%, #646cff33 100%);
+  background: linear-gradient(120deg, rgba(100, 149, 237, 0.1) 0%, rgba(74, 123, 200, 0.1) 100%);
   opacity: 0.3;
   z-index: -1;
   transition: opacity 0.3s;
@@ -63,7 +63,7 @@
 
 .projectCard:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Thêm shadow khi hover */
+  box-shadow: 0 10px 20px rgba(100, 149, 237, 0.15); /* Thêm shadow khi hover */
 }
 
 .projectCard:hover::before {
@@ -85,12 +85,12 @@
 .projectCard h3 {
   padding: 1rem 1rem 0;
   margin: 0;
-  color: #646cff; /* Màu tiêu đề giống link */
+  color: #6495ed; /* Màu tiêu đề giống link */
 }
 
 .projectCard p {
   padding: 0 1rem 1rem;
-  color: rgba(255, 255, 255, 0.7); /* Màu chữ nhạt hơn */
+  color: #213547; /* Màu chữ tối */
 }
 
 .projectLinks {
@@ -102,13 +102,13 @@
 
 .projectLinks a {
   text-decoration: none;
-  color: #646cff; /* Màu link chính */
+  color: #6495ed; /* Màu link chính */
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 .projectLinks a:hover {
-  color: #535bf2; /* Màu hover giống theme */
+  color: #4a7bc8; /* Màu hover giống theme */
   text-decoration: underline;
 }
 
@@ -120,9 +120,9 @@
   justify-content: center;
 }
 .filterBar button {
-  background: #1a1a1a;
-  color: #ffe066;
-  border: 1px solid #444;
+  background: #ffffff;
+  color: #6495ed;
+  border: 1px solid #6495ed;
   border-radius: 20px;
   padding: 0.4rem 1.2rem;
   cursor: pointer;
@@ -131,14 +131,14 @@
 }
 .filterBar button:hover,
 .filterBar .activeFilter {
-  background: #646cff;
+  background: #6495ed;
   color: #fff;
-  border-color: #646cff;
+  border-color: #6495ed;
 }
 .activeFilter {
-  background: #646cff;
+  background: #6495ed;
   color: #fff;
-  border-color: #646cff;
+  border-color: #6495ed;
 }
 
 /* Responsive design */

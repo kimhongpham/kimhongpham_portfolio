@@ -24,12 +24,12 @@
 }
 
 .messagesArea::-webkit-scrollbar-thumb {
-  background: #dadce0;
+  background: #6495ed;
   border-radius: 4px;
 }
 
 .messagesArea::-webkit-scrollbar-thumb:hover {
-  background: #bdc1c6;
+  background: #4a7bc8;
 }
 
 /* Message Wrapper */
@@ -52,7 +52,7 @@
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background: linear-gradient(134deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(134deg, #6495ed 0%, #4a7bc8 100%);
   color: white;
   display: flex;
   align-items: center;
@@ -94,12 +94,12 @@
 }
 
 .botMessage .messageBubble {
-  background: #e4e6ea;
-  color: #050505;
+  background: #e8f2ff;
+  color: #213547;
 }
 
 .userMessage .messageBubble {
-  background: linear-gradient(134deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(134deg, #6495ed 0%, #4a7bc8 100%);
   color: white;
 }
 
@@ -121,7 +121,7 @@
   display: flex;
   align-items: center;
   padding: 8px 12px;
-  background: #e4e6ea;
+  background: #e8f2ff;
   border-radius: 16px;
   width: fit-content;
 }
@@ -130,7 +130,7 @@
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #65676b;
+  background: #6495ed;
   margin: 0 2px;
   animation: typing 1.4s infinite;
 }
@@ -158,7 +158,7 @@
 .inputArea {
   padding: 12px;
   background: white;
-  border-top: 1px solid #e4e6ea;
+  border-top: 1px solid #e8f2ff;
 }
 
 .inputContainer {
@@ -179,14 +179,14 @@
   font-size: 0.9rem;
   line-height: 1.4;
   padding: 6px 8px;
-  color: #050505;
+  color: #213547;
   max-height: 100px;
   min-height: 20px;
   font-family: inherit;
 }
 
 .messageInput::placeholder {
-  color: #65676b;
+  color: #6495ed;
 }
 
 .messageInput:disabled {
@@ -195,25 +195,25 @@
 }
 
 .sendButton {
-  background: linear-gradient(134deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(134deg, #6495ed 0%, #4a7bc8 100%);
   border: none;
   border-radius: 50%;
   width: 32px;
   height: 32px;
-  color: white;
-  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: white;
   font-size: 0.8rem;
-  margin-left: 6px;
-  transition: all 0.2s;
+  margin-left: 8px;
   flex-shrink: 0;
 }
 
 .sendButton:hover:not(:disabled) {
   transform: scale(1.05);
-  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 2px 8px rgba(100, 149, 237, 0.3);
 }
 
 .sendButton:disabled {
@@ -224,27 +224,27 @@
 
 /* Restart Area */
 .restartArea {
+  display: flex;
+  justify-content: center;
   padding: 12px;
-  background: white;
-  border-top: 1px solid #e4e6ea;
-  text-align: center;
+  background: #f8f9fa;
+  border-top: 1px solid #e8f2ff;
 }
 
 .restartButton {
-  background: linear-gradient(134deg, #667eea 0%, #764ba2 100%);
+  background: #6495ed;
   color: white;
   border: none;
+  border-radius: 20px;
   padding: 8px 16px;
-  border-radius: 16px;
-  font-size: 0.85rem;
   cursor: pointer;
-  transition: all 0.2s;
-  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
 }
 
 .restartButton:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+  background: #4a7bc8;
+  transform: scale(1.02);
 }
 
 /* Mobile Responsive */
@@ -307,7 +307,7 @@
 }
 
 .inputContainer:focus-within {
-  box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2);
+  box-shadow: 0 0 0 2px rgba(100, 149, 237, 0.2);
 }
 
 /* Accessibility */

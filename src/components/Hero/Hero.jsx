@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Hero.module.css';
 import profileImage from '../../assets/images/profile.jpg';
+import { SocialIcons } from '../Footer/Footer';
 
 const Hero = () => {
   return (
@@ -19,11 +20,12 @@ const Hero = () => {
         />
       </a>
       <div className={styles.heroContent}>
-        <h1>Kim Hong Pham</h1>
-        <h2>FullStack Software Engineer</h2>
+        <h1>Hi,</h1>
+        <h2>I'm Kim Hong Pham</h2>
         <p>
           "I develop scalable, responsive full-stack applications, combining sleek user interfaces with powerful backend logic and efficient database design."
         </p>
+        <SocialIcons />
       </div>
     </section>
   );

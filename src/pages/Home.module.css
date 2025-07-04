@@ -7,11 +7,12 @@
   padding: 0; /* Remove default padding */
   position: relative;
   z-index: 1;
+  width: 100%; /* Ensure full width */
 }
 
 main {
-  max-width: 1200px; /* Set a maximum width for the main content */
-  margin: 0 auto; /* Center the main content */
+  width: 100%; /* Full width instead of max-width */
+  margin: 0; /* Remove auto margin */
   padding: 20px; /* Add padding around the main content */
 }
 

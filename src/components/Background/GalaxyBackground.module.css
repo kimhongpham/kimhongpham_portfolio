@@ -2,7 +2,7 @@
   position: fixed;
   top: 0; left: 0;
   width: 100vw; height: 100vh;
-  background: radial-gradient(ellipse at 50% 40%, #1a0033 0%, #0d001a 40%, #000511 70%, #000 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #e8f2ff 100%);
   overflow: hidden;
   z-index: 0; /* Để z-index: 0 hoặc thấp nhất */
   pointer-events: none;
@@ -13,27 +13,27 @@
   position: absolute;
   border-radius: 50%;
   filter: blur(90px);
-  opacity: 0.7;
+  opacity: 0.3;
   animation: drift 38s infinite linear;
   pointer-events: none;
 }
 
 .nebula-1 {
   width: 380px; height: 260px;
-  background: radial-gradient(circle, rgba(147,39,143,0.22) 0%, rgba(147,39,143,0.08) 60%, transparent 100%);
+  background: radial-gradient(circle, rgba(100, 149, 237, 0.15) 0%, rgba(100, 149, 237, 0.05) 60%, transparent 100%);
   top: 18%; left: 8%;
   animation-duration: 44s;
 }
 .nebula-2 {
   width: 520px; height: 340px;
-  background: radial-gradient(circle, rgba(30,144,255,0.13) 0%, rgba(30,144,255,0.04) 60%, transparent 100%);
+  background: radial-gradient(circle, rgba(74, 123, 200, 0.12) 0%, rgba(74, 123, 200, 0.03) 60%, transparent 100%);
   top: 48%; right: 6%;
   animation-duration: 54s;
   animation-direction: reverse;
 }
 .nebula-3 {
   width: 400px; height: 260px;
-  background: radial-gradient(circle, rgba(255,20,147,0.11) 0%, rgba(255,20,147,0.03) 60%, transparent 100%);
+  background: radial-gradient(circle, rgba(100, 149, 237, 0.1) 0%, rgba(100, 149, 237, 0.02) 60%, transparent 100%);
   bottom: 18%; left: 28%;
   animation-duration: 62s;
 }
@@ -45,16 +45,16 @@
   height: 28%;
   background: linear-gradient(90deg,
     transparent 0%,
-    rgba(255,255,255,0.03) 10%,
-    rgba(147,39,143,0.08) 30%,
-    rgba(30,144,255,0.06) 50%,
-    rgba(147,39,143,0.08) 70%,
-    rgba(255,255,255,0.03) 90%,
+    rgba(255,255,255,0.8) 10%,
+    rgba(100, 149, 237, 0.1) 30%,
+    rgba(74, 123, 200, 0.08) 50%,
+    rgba(100, 149, 237, 0.1) 70%,
+    rgba(255,255,255,0.8) 90%,
     transparent 100%);
   top: 36%; left: -10%;
   transform: rotate(-15deg);
   filter: blur(4px);
-  opacity: 0.7;
+  opacity: 0.5;
   animation: milkyWayRotate 110s infinite linear;
 }
 
@@ -69,7 +69,8 @@
   border-radius: 50%;
   animation: twinkle 3.5s infinite;
   box-shadow: 0 0 6px currentColor;
-  opacity: 0.7;
+  opacity: 0.4;
+  background: #6495ed;
 }
 
 /* Shooting stars */
@@ -81,17 +82,17 @@
 .shooting-star {
   position: absolute;
   width: 2px; height: 2px;
-  background: linear-gradient(90deg, #fff 0%, #fff8 20%, transparent 100%);
+  background: linear-gradient(90deg, #6495ed 0%, rgba(100, 149, 237, 0.8) 20%, transparent 100%);
   border-radius: 50%;
   animation: shoot 4s infinite linear;
-  opacity: 0.7;
+  opacity: 0.5;
 }
 .shooting-star::before {
   content: '';
   position: absolute;
   top: 0; right: 0;
   width: 50px; height: 1px;
-  background: linear-gradient(90deg, transparent 0%, #fff9 60%, #fff 100%);
+  background: linear-gradient(90deg, transparent 0%, rgba(100, 149, 237, 0.6) 60%, #6495ed 100%);
   transform: translateX(100%);
 }
 
@@ -104,15 +105,15 @@
 .particle {
   position: absolute;
   width: 1px; height: 1px;
-  background: rgba(255,255,255,0.22);
+  background: rgba(100, 149, 237, 0.3);
   border-radius: 50%;
   animation: float 22s infinite linear;
 }
 
 /* Animations */
 @keyframes twinkle {
-  0%, 100% { opacity: 0.3; transform: scale(1);}
-  50% { opacity: 1; transform: scale(1.18);}
+  0%, 100% { opacity: 0.2; transform: scale(1);}
+  50% { opacity: 0.6; transform: scale(1.18);}
 }
 @keyframes shoot {
   0% { transform: translateX(-100px) translateY(-100px); opacity: 0;}

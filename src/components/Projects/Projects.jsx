@@ -6,7 +6,7 @@ const projects = [
   {
     id: 1,
     title: 'LimieRosie Website',
-    description: 'A full-featured online store with cart functionality and payment processing.',
+    description: 'An e-commerce website for fashion products featuring a user-friendly shopping experience with cart management, order tracking, and payment integration.',
     imageUrl: 'https://picsum.photos/300/200?random=1',
     liveUrl: '#',
     codeUrl: '#',
@@ -15,7 +15,7 @@ const projects = [
   {
     id: 2,
     title: 'Blog Website',
-    description: 'A productivity app for organizing tasks with drag-and-drop functionality.',
+    description: 'A personal blog platform where users can create, edit, and delete posts. Includes rich-text editing, comment functionality, and MongoDB-based storage.',
     imageUrl: 'https://picsum.photos/300/200?random=2',
     liveUrl: '#',
     codeUrl: '#',
@@ -33,11 +33,47 @@ const projects = [
   {
     id: 4,
     title: 'Banking App',
-    description: 'The ATM system is built using a service-based architecture, focusing on user experience, security, transaction speed, and scalability for future integration with digital banking services.',
+    description: 'A mobile banking application developed with React Native, providing users with account management, fund transfers, and transaction tracking in a secure environment.',
     imageUrl: 'https://picsum.photos/300/200?random=4',
     liveUrl: '#',
     codeUrl: '#',
     tech: ['React Native', 'Spring Boot', 'PostgreSQL']
+  },
+  {
+    id: 5,
+    title: 'App Thời Trang (Mobile)',
+    description: 'Ứng dụng mua sắm thời trang trên thiết bị di động, kế thừa backend từ website, hỗ trợ thông báo đẩy và kết nối qua GraphQL/REST API.',
+    imageUrl: 'https://picsum.photos/300/200?random=5',
+    liveUrl: '#',
+    codeUrl: '#',
+    tech: ['Kotlin', 'Spring Boot', 'PostgreSQL', 'Firebase', 'GraphQL']
+  },
+  {
+    id: 6,
+    title: 'App Quản Lý Chi Tiêu Cá Nhân',
+    description: 'Ứng dụng giúp người dùng theo dõi và phân tích chi tiêu hàng ngày với biểu đồ trực quan, đồng bộ dữ liệu lên cloud và đăng nhập an toàn bằng OAuth2.',
+    imageUrl: 'https://picsum.photos/300/200?random=6',
+    liveUrl: '#',
+    codeUrl: '#',
+    tech: ['React Native', 'Spring Boot', 'MongoDB', 'OAuth2', 'Chart.js']
+  },
+  {
+    id: 7,
+    title: 'Web Phân Tích Cổ Phiếu Cơ Bản',
+    description: 'Nền tảng phân tích tài chính cho nhà đầu tư, trực quan hóa dữ liệu cổ phiếu theo thời gian thực, kết hợp cache Redis và tích hợp API bên ngoài.',
+    imageUrl: 'https://picsum.photos/300/200?random=7',
+    liveUrl: '#',
+    codeUrl: '#',
+    tech: ['React.js', 'Spring Boot', 'PostgreSQL', 'Redis', 'Python', 'D3.js']
+  },
+  {
+    id: 8,
+    title: 'Web Giả Lập Đầu Tư Cổ Phiếu',
+    description: 'Website mô phỏng đầu tư chứng khoán với dữ liệu giao dịch thời gian thực, bảo mật bằng JWT và triển khai bằng Docker/Kubernetes.',
+    imageUrl: 'https://picsum.photos/300/200?random=8',
+    liveUrl: '#',
+    codeUrl: '#',
+    tech: ['Angular', 'Spring Boot', 'PostgreSQL', 'WebSocket', 'JWT', 'Docker']
   }
 ];
 

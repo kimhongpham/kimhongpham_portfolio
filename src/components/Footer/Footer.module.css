@@ -7,141 +7,211 @@
 }
 
 .footer {
-  text-align: center;
-  padding: 0;                /* Bỏ padding lớn */
-  background: none;           /* Bỏ nền */
-  color: inherit;             /* Dùng màu mặc định */
-  border-top: none;           /* Bỏ border */
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 3rem 0 1rem 0;
+  margin-top: 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.footerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  position: relative;
+  z-index: 2;
+}
+
+.footerSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footerSection h3 {
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.footerSection h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: #ffd700;
+  border-radius: 1px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
+  transition: transform 0.2s ease;
+}
+
+.contactItem:hover {
+  transform: translateX(5px);
+}
+
+.contactIcon {
+  color: #ffd700;
+  font-size: 1.1rem;
+  min-width: 20px;
+}
+
+.contactItem a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contactItem a:hover {
+  color: #ffd700;
+}
+
+.contactItem span {
+  color: #ffffff;
 }
 
 .socialLinks {
-  margin-bottom: 1.2rem;
   display: flex;
-  justify-content: center;
-  gap: 1.5rem;
+  gap: 1.2rem;
+  margin-top: 0.5rem;
 }
 
 .socialLinks a {
-  color: #e0e0e0;
-  text-decoration: none;
-  transition: color 0.2s ease;
-  font-size: 1.1rem;
+  color: #ffffff;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
 }
 
 .socialLinks a:hover {
-  color: #ffffff;
-  text-decoration: none;
+  color: #ffd700;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+  animation: socialBounce 0.38s cubic-bezier(.23,1.01,.32,1) forwards;
 }
 
+.footerBottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.footerBottom p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Social Icons for fixed position (keeping existing functionality) */
 .socialIcons {
   position: fixed;
-  top: 12px;      /* Cách mép trên 12px */
-  left: 12px;     /* Cách mép trái 12px */
+  top: 12px;
+  left: 12px;
   z-index: 2000;
   display: flex;
-  gap: 14px;      /* Nhỏ lại cho gọn */
-  font-size: 2rem;   /* Tăng kích thước icon */
+  gap: 14px;
+  font-size: 2rem;
   align-items: center;
   background: none;
   box-shadow: none;
 }
 
 .socialIcons a {
-  color: #ffe066;
+  color: #6495ed;
   transition: color 0.2s, transform 0.18s;
-  font-size: 2rem;   /* Đảm bảo icon to hơn */
+  font-size: 2rem;
 }
 
 .socialIcons a:hover {
-  color: #646cff;
+  color: #4a7bc8;
   animation: socialBounce 0.38s cubic-bezier(.23,1.01,.32,1) forwards;
 }
 
-.contactInfo {
-  background: #23272f;
-  border-radius: 18px;
-  box-shadow: 0 4px 24px rgba(100, 108, 255, 0.10);
-  padding: 2rem 1.5rem;
-  margin: 0 auto 2rem auto;
-  max-width: 340px;
-  color: #ffe066;
-  text-align: center;    /* Chỉ đổi dòng này từ left sang center */
-  transition: box-shadow 0.2s;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer {
+    padding: 2rem 0 1rem 0;
+  }
 
-.contactInfo:hover {
-  box-shadow: 0 8px 32px rgba(100, 108, 255, 0.18);
-}
+  .footerContent {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1.5rem;
+  }
 
-.contactInfo h3 {
-  margin-top: 0;
-  margin-bottom: 0.7rem;
-  font-size: 1.3rem;
-  color: #ffe066;
-  letter-spacing: 1px;
-}
+  .footerSection h3 {
+    font-size: 1.2rem;
+  }
 
-.contactInfo a {
-  color: #646cff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s;
-}
+  .socialLinks {
+    justify-content: center;
+  }
 
-.contactInfo a:hover {
-  color: #ffe066;
-  text-decoration: underline;
-}
+  .socialLinks a {
+    width: 40px;
+    height: 40px;
+    font-size: 1.3rem;
+  }
 
-.contactInfo p {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  justify-content: center; /* Thêm dòng này để căn giữa nội dung */
-}
-
-.contactHeader {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 0.7rem;
-}
-
-.contactHeader h3 {
-  margin: 0;
-  font-size: 1.3rem;
-  color: #ffe066;
-  letter-spacing: 1px;
-}
-
-.contactIcon {
-  color: #646cff;
-  font-size: 1.2em;
-  margin-right: 8px; /* Thêm dòng này để tạo khoảng cách */
-  vertical-align: middle;
+  .contactItem {
+    justify-content: center;
+    text-align: center;
+  }
 }
 
 @media (max-width: 600px) {
   .socialIcons {
     flex-direction: column;
-    top: 10px;    /* Mobile: cách mép trên 10px */
-    left: 10px;   /* Mobile: cách mép trái 10px */
+    top: 10px;
+    left: 10px;
     gap: 12px;
     font-size: 1.5rem;
   }
 
-  .contactInfo {
-    padding: 1.2rem 0.7rem;
-    max-width: 98vw;
-    font-size: 0.98rem;
-  }
-
-  .socialIcons {
-    font-size: 1.5rem; /* Mobile cũng to hơn mặc định */
-    gap: 12px;
-  }
   .socialIcons a {
     font-size: 1.5rem;
+  }
+
+  .footerContent {
+    padding: 0 1rem;
+  }
+
+  .footerSection h3 {
+    font-size: 1.1rem;
   }
 }

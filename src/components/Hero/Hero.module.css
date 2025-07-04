@@ -1,11 +1,11 @@
 :root {
-  --primary-color: #fff;
-  --secondary-color: #e0e0e0;
-  --text-color: #f5f5f5;
-  --bg-color: #23234a;
-  --border-color: #fff;
-  --shadow-color: rgba(0, 0, 0, 0.1);
-  --hover-shadow-color: rgba(0, 0, 0, 0.15);
+  --primary-color: #6495ed;
+  --secondary-color: #4a7bc8;
+  --text-color: #213547;
+  --bg-color: #ffffff;
+  --border-color: #6495ed;
+  --shadow-color: rgba(100, 149, 237, 0.1);
+  --hover-shadow-color: rgba(100, 149, 237, 0.2);
 }
 
 .hero {
@@ -22,11 +22,6 @@
 .heroContent {
   max-width: 600px;
   margin-left: 0;
-}
-
-.heroContent h1 {
-  text-align: center;
-  width: 100%;
 }
 
 .avatar {
